@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estação IoT | Sobre o Projeto</title>
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <h1>Estação de Monitoramento IoT</h1>
+      <p class="grupo">Grupo 01 — Turma 3° EM B</p>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="nav-btn">Início</a>
+      <a href="projeto.html" class="nav-btn active">Sobre o Projeto</a>
+      <a href="dashb.html" class="nav-btn">Dashboard Ao Vivo</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="card-sobre">
+      <h2>Objetivo do Projeto</h2>
+      <p>
+        Desenvolver uma solução IoT ponta a ponta capaz de coletar dados ambientais 
+        (temperatura, umidade e qualidade do ar) através de um microcontrolador ESP32, 
+        transmitir as informações em tempo real via MQTT e exibi-las em uma página Web 
+        interativa com navegação e identificação do grupo.
+      </p>
+    </article>
+
+    <article class="card-sobre">
+      <h2>Hardware Utilizado</h2>
+      <ul>
+        <li>Microcontrolador ESP32 Dev Module</li>
+        <li>Sensor DHT11 (Temperatura e Umidade – GPIO 14)</li>
+        <li>Sensor MQ-135 (Qualidade do Ar – GPIO analógico)</li>
+        <li>3 LEDs de alerta físico (Temperatura, Umidade e Gás)</li>
+      </ul>
+    </article>
+
+    <article class="card-sobre">
+      <h2>Arquitetura</h2>
+      <p>
+        O ESP32 lê os sensores a cada 3 segundos e publica os dados no broker 
+        Mosquitto (porta 1883). A página web se conecta via WebSockets (porta 9001) 
+        usando a biblioteca Paho MQTT e atualiza os cards em tempo real.
+      </p>
+    </article>
+
+    <!-- Galeria de imagens (coloque suas fotos na pasta assets/img) -->
+    <section class="galeria">
+      <h2>Fotos do Projeto</h2>
+      <div class="imagens">
+        <figure>
+          <img src="../assets/img/WhatsApp Image 2026-09-08 at 07.30.41.jpeg" alt="ESP32 e sensores">
+          <figcaption>ESP32 + sensores</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Integrantes: Marcos, Alexandre, Giovanna, Leide, Pablo</p>
+  </footer>
+</body>
+</html>
