@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estação IoT | Dashboard</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <h1>Estação de Monitoramento IoT</h1>
+      <p class="grupo">Grupo 01 — Turma 3° EM B</p>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="nav-btn">Início</a>
+      <a href="projeto.html" class="nav-btn">Sobre o Projeto</a>
+      <a href="dashb.html" class="nav-btn active">Dashboard Ao Vivo</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="status-bar">
+      <span id="status-conexao" class="status desconectado">Desconectado</span>
+    </div>
+
+    <div class="cards">
+      <div class="card temp">
+        <h3>Temperatura</h3>
+        <p class="valor" id="temp-valor">-- °C</p>
+        <div class="indicador" id="temp-alerta"></div>
+      </div>
+
+      <div class="card umid">
+        <h3>Umidade</h3>
+        <p class="valor" id="umid-valor">-- %</p>
+        <div class="indicador" id="umid-alerta"></div>
+      </div>
+
+      <div class="card gas">
+        <h3>Qualidade do Ar</h3>
+        <p class="valor" id="gas-valor">--</p>
+        <div class="indicador" id="gas-alerta"></div>
+      </div>
+    </div>
+
+    <div class="banner">
+      Projeto IOT SESI SENAI Vinhedo Grupo XX
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Integrantes: Marcos, Alexandre, Giovanna, Leide, Pablo</p>
+  </footer>
+
+  <script src="../js/index.js"></script>
+</body>
+</html>
